@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Github, ExternalLink, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -142,7 +141,7 @@ const ProjectDetail = () => {
                   <Badge 
                     key={tech} 
                     variant="secondary" 
-                    className="bg-blue-500/20 text-blue-300 border-blue-500/30"
+                    className="bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30 hover:text-blue-200 hover:border-blue-400/40 transition-all duration-200"
                   >
                     {tech}
                   </Badge>
