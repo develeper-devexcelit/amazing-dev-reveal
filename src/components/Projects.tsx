@@ -87,7 +87,7 @@ const Projects = () => {
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="border-white/30 text-white hover:bg-white/10 flex-1"
+                    className="bg-transparent border-white/30 text-white hover:bg-white hover:text-gray-900 flex-1"
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
