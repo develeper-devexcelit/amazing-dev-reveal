@@ -3,10 +3,14 @@ import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
+  
   const projects = [
     {
+      id: "ecommerce-platform",
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
@@ -15,6 +19,7 @@ const Projects = () => {
       live: "#"
     },
     {
+      id: "task-management-app",
       title: "Task Management App",
       description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
@@ -23,6 +28,7 @@ const Projects = () => {
       live: "#"
     },
     {
+      id: "weather-dashboard",
       title: "Weather Dashboard",
       description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
@@ -31,6 +37,10 @@ const Projects = () => {
       live: "#"
     }
   ];
+
+  const handleCardClick = (projectId: string) => {
+    navigate(`/project/${projectId}`);
+  };
 
   return (
     <section className="py-20 px-6">
@@ -48,7 +58,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:scale-105 overflow-hidden group"
+              className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:scale-105 overflow-hidden group cursor-pointer"
+              onClick={() => handleCardClick(project.id)}
               style={{
                 animationDelay: `${index * 0.2}s`
               }}
@@ -88,6 +99,10 @@ const Projects = () => {
                     variant="outline" 
                     size="sm" 
                     className="bg-transparent border-white/30 text-white hover:bg-white hover:text-gray-900 flex-1"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      // Handle GitHub link
+                    }}
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
@@ -95,6 +110,10 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-1"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      // Handle live demo link
+                    }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live
