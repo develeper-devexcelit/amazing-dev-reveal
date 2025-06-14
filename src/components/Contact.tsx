@@ -21,7 +21,7 @@ const Contact = () => {
             <CardContent className="p-8 text-center">
               <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-              <p className="text-gray-300">alex@developer.com</p>
+              <p className="text-gray-300">irtaza@developer.com</p>
             </CardContent>
           </Card>
           
@@ -55,7 +55,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-20 pt-8 border-t border-white/10">
           <p className="text-gray-400">
-            © 2024 Alex Developer. Built with React & Tailwind CSS.
+            © 2024 Irtaza. Built with React & Tailwind CSS.
           </p>
         </div>
       </div>
