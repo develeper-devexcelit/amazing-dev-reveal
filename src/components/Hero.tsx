@@ -43,7 +43,7 @@ const Hero = () => {
             <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
               View My Work
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+            <Button variant="outline" size="lg" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
               Download CV
             </Button>
           </div>
