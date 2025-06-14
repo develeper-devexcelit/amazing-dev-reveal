@@ -25,7 +25,7 @@ const Skills = () => {
             <Badge 
               key={skill} 
               variant="secondary" 
-              className="text-lg px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-white/20 text-white hover:from-blue-500/30 hover:to-purple-500/30 hover:scale-110 transition-all duration-300 cursor-pointer"
+              className="text-lg px-6 py-3 bg-slate-800/80 border-slate-600/50 text-slate-100 hover:bg-slate-700/90 hover:border-slate-500/70 hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer backdrop-blur-sm"
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
