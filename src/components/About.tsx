@@ -11,8 +11,11 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate developer with 5+ years of experience creating digital experiences 
-            that combine beautiful design with powerful functionality.
+            From as long as I can remember, my deep curiosity and passion for learning have driven me to explore technology with relentless
+            enthusiasm. I constantly seek out cutting-edge tools and innovative techniques to streamline my work, and my expertise in prompt
+            engineering helps me tackle every task with precision and a commitment to excellence. Eager to embrace new challenges, I
+            continuously master emerging technologies and pioneer fresh solutions, always pushing beyond expectations to not just adapt to
+            change, but to drive it.
           </p>
         </div>
         

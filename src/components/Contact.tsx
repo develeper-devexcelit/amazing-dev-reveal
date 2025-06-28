@@ -21,7 +21,7 @@ const Contact = () => {
             <CardContent className="p-8 text-center">
               <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-              <p className="text-gray-300">irtaza@developer.com</p>
+              <p className="text-gray-300">malikirtaza96@gmail.com</p>
             </CardContent>
           </Card>
           
@@ -29,7 +29,7 @@ const Contact = () => {
             <CardContent className="p-8 text-center">
               <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-              <p className="text-gray-300">+1 (555) 123-4567</p>
+              <p className="text-gray-300">+923035737327</p>
             </CardContent>
           </Card>
           
@@ -37,7 +37,7 @@ const Contact = () => {
             <CardContent className="p-8 text-center">
               <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Location</h3>
-              <p className="text-gray-300">San Francisco, CA</p>
+              <p className="text-gray-300">Lahore, Pakistan</p>
             </CardContent>
           </Card>
         </div>

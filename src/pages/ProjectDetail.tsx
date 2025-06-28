@@ -11,6 +11,34 @@ const ProjectDetail = () => {
   // Mock project data - in a real app, this would come from an API or database
   const projects = [
     {
+      id: "advanced-research-agent",
+      title: "Advanced Research Agent System",
+      description: "A sophisticated AI research system built with the latest OpenAI Agents SDK, featuring multi-agent workflows for comprehensive research and analysis. Fully tested and production-ready with 13/13 tests passing.",
+      longDescription: "A sophisticated AI research system built with the latest OpenAI Agents SDK, featuring multi-agent workflows for comprehensive research and analysis. The system employs 10 specialized agents working in coordination to handle various research domains, from academic research to market analysis. With structured outputs using Pydantic models, parallel processing capabilities, and built-in quality control, this system delivers professional research reports with actionable insights.",
+      image: "https://images.unsplash.com/photo-1677442135968-6bd241f26c42?w=800&h=500&fit=crop",
+      gallery: [
+        "https://images.unsplash.com/photo-1677442135968-6bd241f26c42?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=400&fit=crop"
+      ],
+      tech: ["Python", "OpenAI Agents SDK", "Pydantic", "Rich Console", "asyncio"],
+      github: "#",
+      live: "#",
+      date: "2024",
+      role: "AI Systems Engineer",
+      features: [
+        "Multi-Agent Coordination with 10 Specialized Agents",
+        "Intelligent Triage and Routing System",
+        "Parallel Processing for Optimal Performance",
+        "Structured Outputs with Pydantic Models",
+        "Real-time Progress Updates",
+        "Source Verification and Credibility Assessment",
+        "Automated Quality Control",
+        "Professional Report Generation"
+      ],
+      challenges: "The main challenge was orchestrating multiple specialized agents to work together seamlessly while maintaining data consistency across the research pipeline. This was solved by implementing a robust agent communication protocol and a centralized orchestrator that manages agent handoffs and data validation at each step of the process."
+    },
+    {
       id: "ecommerce-platform",
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",

@@ -1,10 +1,13 @@
 
+import { lazy, Suspense } from 'react';
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import ChatBot from "@/components/ChatBot";
+
+// Lazy load the Chatbot component
+const Chatbot = lazy(() => import('@/components/Chatbot'));
 
 const Index = () => {
   return (
@@ -14,7 +17,9 @@ const Index = () => {
       <Skills />
       <Projects />
       <Contact />
-      <ChatBot />
+      <Suspense fallback={null}>
+        <Chatbot />
+      </Suspense>
     </div>
   );
 };

@@ -3,9 +3,10 @@ import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skills = [
-    "React", "TypeScript", "Node.js", "Python", "JavaScript", "Next.js",
-    "Tailwind CSS", "PostgreSQL", "MongoDB", "AWS", "Docker", "Git",
-    "GraphQL", "Redux", "Express.js", "Vue.js", "Sass", "Firebase"
+    "TypeScript", "Next.js", "Supabase", "Stripe", "Full Stack Development",
+    "Database Optimization", "AI Integrations", "Workflow Automation", 
+    "Debugging", "Troubleshooting", "API Development", "RESTful APIs", 
+    "GraphQL", "Docker", "CI/CD", "Git", "GitHub", "Web Development"
   ];
 
   return (

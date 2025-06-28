@@ -10,29 +10,38 @@ const Projects = () => {
   
   const projects = [
     {
-      id: "ecommerce-platform",
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      id: "e-learning-platform",
+      title: "E-learning Platform",
+      description: "Architected and delivered complex projects end-to-end, including an e-learning platform and a card trading application.",
+      image: "https://images.unsplash.com/photo-1546410531-bb4597444232?w=600&h=400&fit=crop",
+      tech: ["Next.js", "Supabase", "PostgreSQL", "MongoDB"],
       github: "#",
       live: "#"
     },
     {
-      id: "task-management-app",
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
+      id: "ai-features",
+      title: "AI Features Integration",
+      description: "Integrated OpenAI Assistant API for AI features; fine-tuned models to enhance chatbot performance and contextual accuracy.",
+      image: "https://images.unsplash.com/photo-1596526131083-fdc04311369e?w=600&h=400&fit=crop",
+      tech: ["OpenAI Assistant API", "Fine-tuning", "Chatbot"],
       github: "#",
       live: "#"
     },
     {
-      id: "weather-dashboard",
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      tech: ["React", "TypeScript", "OpenWeather API"],
+      id: "full-stack-applications",
+      title: "Full-Stack Applications",
+      description: "Developed full-stack applications using Next.js, Supabase, PostgreSQL, and MongoDB for front-end UI and backend data management.",
+      image: "https://images.unsplash.com/photo-1587620962725-abab7fe65553?w=600&h=400&fit=crop",
+      tech: ["Next.js", "Supabase", "PostgreSQL", "MongoDB"],
+      github: "#",
+      live: "#"
+    },
+    {
+      id: "workflow-automation",
+      title: "Workflow Automation",
+      description: "Automated development workflows using n8n and API integrations (including OpenAI), significantly improving process efficiency.",
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ed?w=600&h=400&fit=crop",
+      tech: ["n8n", "API Integrations", "OpenAI"],
       github: "#",
       live: "#"
     }

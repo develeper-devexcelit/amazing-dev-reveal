@@ -1,54 +1,96 @@
-# Welcome to your Lovable project
+# Amazing Dev Reveal
 
-## Project info
+A modern developer portfolio website with an AI chatbot assistant.
 
-**URL**: https://lovable.dev/projects/0b97c633-e4bd-4c56-abc4-8598c34ab3fa
+## Features
 
-## How can I edit this code?
+- Responsive design
+- Dark/light mode support
+- AI-powered chatbot using OpenRouter
+- Project showcase
+- Skills section
+- Contact form
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0b97c633-e4bd-4c56-abc4-8598c34ab3fa) and start prompting.
+- Node.js (v16 or later)
+- pnpm (recommended) or npm
+- OpenRouter API key (get it from [OpenRouter](https://openrouter.ai/keys))
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/aIrtaza Portfolio.git
+   cd aIrtaza Portfolio
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Install dependencies:
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. Set up environment variables:
+   - Copy `.env.example` to `.env.local`
+   - Add your OpenRouter API key to `.env.local`
 
-Follow these steps:
+### Running Locally
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Start the development server:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+pnpm dev
+# or
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Chatbot Setup
 
-**Use GitHub Codespaces**
+The chatbot uses OpenRouter to provide AI-powered assistance. To use it:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Get an API key from [OpenRouter](https://openrouter.ai/keys)
+2. Add it to your `.env.local` file:
+   ```
+   VITE_OPENROUTER_API_KEY=your_api_key_here
+   ```
+3. The chatbot will appear in the bottom-right corner of the website
+
+## Building for Production
+
+```bash
+pnpm build
+# or
+npm run build
+```
+
+This will create a `dist` folder with the production build.
+
+## Deployment
+
+### Vercel
+
+The easiest way to deploy your app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+### Netlify
+
+You can also deploy to Netlify by connecting your GitHub repository.
+
+### Environment Variables
+
+Make sure to set up the following environment variables in your deployment:
+- `VITE_OPENROUTER_API_KEY`: Your OpenRouter API key
+
+## Learn More
+
+- [React Documentation](https://react.dev/)
+- [Vite Documentation](https://vitejs.dev/)
+- [OpenRouter Documentation](https://openrouter.ai/docs)
 
 ## What technologies are used for this project?
 
