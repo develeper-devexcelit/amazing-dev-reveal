@@ -5,7 +5,10 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import Chatbot from "@/components/Chatbot";
+import { lazy } from 'react';
+
+// Lazy load the Chatbot component with dynamic import
+const Chatbot = lazy(() => import('@/components/Chatbot'));
 
 const Index = () => {
   return (

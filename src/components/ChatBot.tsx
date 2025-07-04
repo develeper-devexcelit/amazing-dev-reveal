@@ -56,6 +56,7 @@ const TypingIndicator = () => (
   </div>
 );
 
+// Export the Chatbot component as the default export
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
