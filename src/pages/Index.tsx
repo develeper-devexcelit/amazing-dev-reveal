@@ -5,10 +5,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import { lazy } from 'react';
-
-// Lazy load the Chatbot component with dynamic import
-const Chatbot = lazy(() => import('@/components/Chatbot'));
+import ChatbotComponent from "@/components/ChatbotComponent";
 
 const Index = () => {
   return (
@@ -18,9 +15,7 @@ const Index = () => {
       <Skills />
       <Projects />
       <Contact />
-      <Suspense fallback={null}>
-        <Chatbot />
-      </Suspense>
+      <ChatbotComponent />
     </div>
   );
 };
