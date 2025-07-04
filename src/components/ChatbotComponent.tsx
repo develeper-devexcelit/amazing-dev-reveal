@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import OpenAI from 'openai';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -191,47 +191,6 @@ export default function ChatbotComponent() {
     );
   }
 
-  // Memoize rendered messages to avoid re-rendering on input change
-  const renderedMessages = useMemo(() => (
-    messages.map((message) => (
-      <MotionDiv
-        key={message.id}
-        className={`flex ${message.role === 'assistant' ? 'justify-start' : 'justify-end'}`}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div 
-          className={
-            `max-w-[80%] rounded-2xl p-4 ` +
-            (message.role === 'assistant'
-              ? 'bg-gradient-to-br from-blue-600/20 to-purple-600/20 text-white border border-blue-500/20'
-              : 'bg-gradient-to-br from-purple-600/30 to-blue-600/30 text-white border border-purple-500/20')
-          }
-        >
-          <div className="flex items-center space-x-2 mb-1">
-            {message.role === 'assistant' ? (
-              <Bot className="h-4 w-4 text-blue-400" />
-            ) : (
-              <User className="h-4 w-4 text-purple-400" />
-            )}
-            <span className="text-xs font-medium text-gray-300">
-              {message.role === 'assistant' ? 'AI Assistant' : 'You'}
-            </span>
-          </div>
-          <MotionP
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-sm whitespace-pre-wrap"
-          >
-            {message.content}
-          </MotionP>
-        </div>
-      </MotionDiv>
-    ))
-  ), [messages]);
-
   return (
     <MotionDiv 
       className="fixed bottom-8 right-8 w-96 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl shadow-2xl flex flex-col h-[600px] border border-purple-500/20 overflow-hidden z-50 backdrop-blur-sm"
@@ -297,7 +256,43 @@ export default function ChatbotComponent() {
       {/* Messages */}
       <ScrollArea className="flex-1 p-4">
         <div className="space-y-4">
-          {renderedMessages}
+          {messages.map((message) => (
+            <MotionDiv
+              key={message.id}
+              className={`flex ${message.role === 'assistant' ? 'justify-start' : 'justify-end'}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div 
+                className={`
+                  max-w-[80%] rounded-2xl p-4 
+                  ${message.role === 'assistant' 
+                    ? 'bg-gradient-to-br from-blue-600/20 to-purple-600/20 text-white border border-blue-500/20' 
+                    : 'bg-gradient-to-br from-purple-600/30 to-blue-600/30 text-white border border-purple-500/20'}
+                `}
+              >
+                <div className="flex items-center space-x-2 mb-1">
+                  {message.role === 'assistant' ? (
+                    <Bot className="h-4 w-4 text-blue-400" />
+                  ) : (
+                    <User className="h-4 w-4 text-purple-400" />
+                  )}
+                  <span className="text-xs font-medium text-gray-300">
+                    {message.role === 'assistant' ? 'AI Assistant' : 'You'}
+                  </span>
+                </div>
+                <MotionP
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-sm whitespace-pre-wrap"
+                >
+                  {message.content}
+                </MotionP>
+              </div>
+            </MotionDiv>
+          ))}
           {isLoading && <TypingIndicator />}
           <div ref={messagesEndRef} />
         </div>
