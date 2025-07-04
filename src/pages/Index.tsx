@@ -7,7 +7,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
 // Lazy load the Chatbot component
-const Chatbot = lazy(() => import('@/components/Chatbot.tsx'));
+const Chatbot = lazy(() => import('@/components/Chatbot'));
 
 const Index = () => {
   return (
