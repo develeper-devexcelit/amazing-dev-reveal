@@ -103,7 +103,7 @@ export default function Chatbot() {
 
     try {
       const completion = await openai.chat.completions.create({
-        model: 'openai/gpt-3.5-turbo',
+        model: 'deepseek/deepseek-chat-v3-0324:free',
         messages: [
           { 
             role: 'system', 
