@@ -97,13 +97,13 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-900 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and passion for development
           </p>
         </div>
@@ -112,7 +112,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:scale-105 overflow-hidden group cursor-pointer"
+              className="bg-white border-gray-200 hover:bg-gray-50 transition-all duration-500 hover:scale-105 overflow-hidden group cursor-pointer"
               onClick={() => handleCardClick(project)}
               style={{
                 animationDelay: `${index * 0.2}s`
@@ -128,11 +128,11 @@ const Projects = () => {
               </div>
               
               <CardHeader>
-                <CardTitle className="text-white text-xl">{project.title}</CardTitle>
+                <CardTitle className="text-black text-xl">{project.title}</CardTitle>
               </CardHeader>
               
               <CardContent className="space-y-4">
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-900 text-sm leading-relaxed">
                   {project.description}
                 </p>
                 
@@ -141,7 +141,7 @@ const Projects = () => {
                     <Badge 
                       key={tech} 
                       variant="secondary" 
-                      className="bg-blue-500/20 text-blue-300 border-blue-500/30"
+                      className="bg-white border border-gray-300 text-black hover:bg-gray-100 hover:border-gray-400 hover:text-black transition-all duration-200"
                     >
                       {tech}
                     </Badge>
@@ -152,7 +152,7 @@ const Projects = () => {
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="bg-transparent border-white/30 text-white hover:bg-white hover:text-gray-900 flex-1"
+                    className="bg-transparent border-gray-300 text-gray-900 hover:bg-gray-100 flex-1"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(project.github, '_blank');
@@ -163,7 +163,7 @@ const Projects = () => {
                   </Button>
                   <Button 
                     size="sm" 
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-1"
+                    className="bg-gray-200 text-gray-900 hover:bg-gray-300 flex-1"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(project.live, '_blank');
