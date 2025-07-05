@@ -51,9 +51,16 @@ const Hero = () => {
             <Button size="lg" className="bg-gray-800 text-white px-8 py-4 text-lg font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
               View My Work
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-gray-200 text-black hover:bg-gray-100 hover:text-gray-900 px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-              Download CV
-            </Button>
+            <a
+              href="/Irtaza_malik_-_Full_Stack_at_DevExcel__Passionate_about_Full-Stack_Development.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="lg" className="bg-transparent border-gray-200 text-black hover:bg-gray-100 hover:text-gray-900 px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                Download CV
+              </Button>
+            </a>
           </div>
           
           {/* Scroll indicator */}

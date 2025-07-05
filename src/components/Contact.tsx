@@ -43,14 +43,20 @@ const Contact = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            variant="default"
-            className="px-12 py-6 text-lg font-semibold hover:scale-105 transition-all duration-300"
+          <a 
+            href="mailto:malikirtaza96@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Mail className="w-5 h-5 mr-2" />
-            Get In Touch
-          </Button>
+            <Button 
+              size="lg" 
+              variant="default"
+              className="px-12 py-6 text-lg font-semibold hover:scale-105 transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Get In Touch
+            </Button>
+          </a>
         </div>
         
         {/* Footer */}
