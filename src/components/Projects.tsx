@@ -15,12 +15,6 @@ const Projects = () => {
       title: "Live Bitcoin Prediction",
       description: "A Django-based web application that fetches the current Bitcoin price, predicts the next minute's price using a simple linear regression model, and displays the data on a web page.",
       longDescription: "This project is a Django-based web application that fetches the current Bitcoin price, predicts the next minute's price using a simple linear regression model, and displays the data on a web page. The application updates the prediction and the displayed data every minute. It also displays historical Bitcoin prices on a chart for better visualization of price trends.",
-      image: "https://images.unsplash.com/photo-1640340434855-6084b20a0449?w=800&h=500&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1640340434855-6084b20a0449?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1631526487228-a2d9a40076a0?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1518546305921-5208bb482f3a?w=600&h=400&fit=crop"
-      ],
       tech: ["Django", "Background Task", "Pandas", "Scikit-learn", "NumPy", "Chart.js", "HTML/CSS/JavaScript"],
       github: "https://github.com/irtaza302/Bit_coin-prediction-Django-Live",
       live: "#",
@@ -40,12 +34,6 @@ const Projects = () => {
       title: "Advanced Research Agent System",
       description: "A sophisticated AI research system built with the latest OpenAI Agents SDK, featuring multi-agent workflows for comprehensive research and analysis. Fully tested and production-ready with 13/13 tests passing.",
       longDescription: "A sophisticated AI research system built with the latest OpenAI Agents SDK, featuring multi-agent workflows for comprehensive research and analysis. The system employs 10 specialized agents working in coordination to handle various research domains, from academic research to market analysis. With structured outputs using Pydantic models, parallel processing capabilities, and built-in quality control, this system delivers professional research reports with actionable insights.",
-      image: "https://images.unsplash.com/photo-1694663363412-f127ec81e3a1?w=800&h=500&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1694663363412-f127ec81e3a1?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1555949963-ff98c6269d5f?w=600&h=400&fit=crop"
-      ],
       tech: ["Python", "OpenAI Agents SDK", "Pydantic", "Rich Console", "asyncio"],
       github: "https://github.com/irtaza302/open-router-agent",
       live: "",
@@ -68,12 +56,6 @@ const Projects = () => {
       title: "AI-Powered Personal Diary",
       description: "A secure and responsive personal diary application with AI-powered insights, built with Next.js, MongoDB, and Google Generative AI.",
       longDescription: "This is a full-stack personal diary application built with the latest technologies. It provides secure user authentication using NextAuth.js and JWT, allowing users to create, edit, and manage their daily diary entries. The standout feature is the integration of Google's Generative AI, which offers intelligent insights and analysis of the user's entries. The application is built with a focus on a beautiful, responsive UI that works seamlessly on both desktop and mobile devices.",
-      image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=500&fit=crop",
-      gallery: [
-          "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1456325504744-8238b2549b62?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
-      ],
       tech: ["Next.js 15", "React 19", "NextAuth.js", "MongoDB", "Google Generative AI", "TailwindCSS", "Framer Motion", "TypeScript"],
       github: "https://github.com/irtaza302/ai-personal-diary",
       live: "#",
@@ -112,32 +94,23 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="bg-white border-gray-200 hover:bg-gray-50 transition-all duration-500 hover:scale-105 overflow-hidden group cursor-pointer"
+              className="bg-white border-gray-200 hover:bg-gray-50 transition-all duration-500 hover:scale-105 overflow-hidden group cursor-pointer h-full flex flex-col"
               onClick={() => handleCardClick(project)}
               style={{
                 animationDelay: `${index * 0.2}s`
               }}
             >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              
-              <CardHeader>
+              <CardHeader className="border-b border-gray-100">
                 <CardTitle className="text-black text-xl">{project.title}</CardTitle>
               </CardHeader>
               
-              <CardContent className="space-y-4">
-                <p className="text-gray-900 text-sm leading-relaxed">
+              <CardContent className="space-y-4 flex-1 flex flex-col pt-6">
+                <p className="text-gray-900 text-sm leading-relaxed flex-1">
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {project.tech.slice(0, 3).map((tech) => (
                     <Badge 
                       key={tech} 
                       variant="secondary" 
@@ -146,9 +119,14 @@ const Projects = () => {
                       {tech}
                     </Badge>
                   ))}
+                  {project.tech.length > 3 && (
+                    <Badge variant="outline" className="bg-transparent text-gray-500">
+                      +{project.tech.length - 3} more
+                    </Badge>
+                  )}
                 </div>
                 
-                <div className="flex gap-3 pt-4">
+                <div className="flex gap-3 pt-4 mt-auto">
                   <Button 
                     variant="outline" 
                     size="sm" 
@@ -160,17 +138,6 @@ const Projects = () => {
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className="bg-gray-200 text-gray-900 hover:bg-gray-300 flex-1"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(project.live, '_blank');
-                    }}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live
                   </Button>
                 </div>
               </CardContent>
