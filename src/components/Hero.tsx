@@ -19,11 +19,9 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-black mb-6 leading-tight">
             Hi, I'm{" "}
             <span
-              className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent font-bold relative animate-gradient-move"
+              className="animated-gradient font-bold relative"
               style={{
                 textShadow: "0 2px 16px rgba(80, 80, 180, 0.18)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
               }}
             >
               Irtaza
