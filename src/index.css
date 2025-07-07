@@ -339,7 +339,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: gradient-slide 12s linear infinite;
+        animation: gradient-slide 20s linear infinite;
     }
 
     .gradient-move {
