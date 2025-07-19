@@ -53,17 +53,17 @@ const TypingIndicator = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
-    className="flex items-center space-x-2 p-4 bg-white rounded-2xl border border-gray-200 backdrop-blur-sm shadow-sm"
+    className="flex items-center space-x-2 p-4 bg-white rounded-none border border-gray-200 backdrop-blur-sm shadow-sm"
   >
     <div className="flex items-center space-x-2">
-      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+      <div className="w-8 h-8 bg-black rounded-none flex items-center justify-center">
         <Bot className="h-4 w-4 text-white" />
       </div>
       <div className="flex space-x-1">
         {[1, 2, 3].map((i) => (
           <MotionDiv
             key={i}
-            className="w-2 h-2 bg-black rounded-full"
+            className="w-2 h-2 bg-black rounded-none"
             animate={{
               y: [0, -8, 0],
               scale: [1, 1.3, 1],
@@ -126,7 +126,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <MotionDiv
           key={particle.id}
-          className="absolute rounded-full"
+          className="absolute rounded-none"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
@@ -190,7 +190,7 @@ const MessageComponent = forwardRef<
       >
         <div
           className={`
-            relative rounded-2xl p-4 backdrop-blur-lg border shadow-lg transition-all duration-300 hover:shadow-xl
+            relative rounded-none p-4 backdrop-blur-lg border shadow-lg transition-all duration-300 hover:shadow-xl
             transition-all duration-300 hover:shadow-xl
             ${
               isAssistant
@@ -202,7 +202,7 @@ const MessageComponent = forwardRef<
           {/* Message Header */}
           <div className="flex items-center space-x-2 mb-2">
             <div
-              className={`w-6 h-6 rounded-full flex items-center justify-center ${
+              className={`w-6 h-6 rounded-none flex items-center justify-center ${
                 isAssistant ? "bg-black" : "bg-gray-800"
               }`}
             >
@@ -568,7 +568,7 @@ export default function ChatbotComponent() {
 
   return (
     <MotionDiv
-      className="fixed bottom-8 right-8 w-96 bg-white backdrop-blur-xl rounded-3xl shadow-2xl flex flex-col h-[650px] border border-gray-200 overflow-hidden z-50"
+      className="fixed bottom-8 right-8 w-96 bg-white backdrop-blur-xl rounded-none shadow-2xl flex flex-col h-[650px] border border-gray-200 overflow-hidden z-50"
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       animate={{
         opacity: 1,
@@ -595,7 +595,7 @@ export default function ChatbotComponent() {
       >
         <div className="flex items-center space-x-3">
           <MotionDiv
-            className="w-10 h-10 bg-black rounded-full flex items-center justify-center backdrop-blur-sm border border-gray-200"
+            className="w-10 h-10 bg-black rounded-none flex items-center justify-center backdrop-blur-sm border border-gray-200"
             animate={{
               rotate: [0, 5, -5, 0],
               scale: [1, 1.05, 1],
@@ -672,7 +672,7 @@ export default function ChatbotComponent() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask me anything about Irtaza..."
-              className="pr-12 bg-white border-gray-300 text-black placeholder-gray-500 focus:border-black focus:ring-gray-200 rounded-2xl"
+              className="pr-12 bg-white border-gray-300 text-black placeholder-gray-500 focus:border-black focus:ring-gray-200 rounded-none"
               disabled={isLoading}
               ref={inputRef}
               maxLength={500}
@@ -681,7 +681,7 @@ export default function ChatbotComponent() {
               type="button"
               onClick={handleVoiceInput}
               disabled={isLoading}
-              className={`absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 rounded-full transition-all duration-300 ${
+              className={`absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 rounded-none transition-all duration-300 ${
                 isListening
                   ? "bg-red-500 hover:bg-red-600 text-white animate-pulse"
                   : "bg-gray-100 hover:bg-gray-200 text-gray-600 hover:scale-110"
@@ -697,7 +697,7 @@ export default function ChatbotComponent() {
           <Button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className={`h-12 w-12 rounded-full p-0 ${
+            className={`h-12 w-12 rounded-none p-0 ${
               isLoading || !input.trim()
                 ? "bg-gray-200 text-gray-400"
                 : "bg-black text-white hover:bg-gray-800 shadow-lg"
